@@ -1,0 +1,209 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to complement Tailwind */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .quantity-btn {
+            transition: all 0.2s ease;
+        }
+        .quantity-btn:hover {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Your Shopping Cart</h1>
+            <p class="text-gray-600">Review and checkout your items</p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Cart Items Section -->
+            <main class="lg:w-2/3">
+                <!-- Cart Header -->
+                <div class="hidden md:grid grid-cols-12 gap-4 mb-4 bg-gray-100 p-4 rounded-lg">
+                    <div class="col-span-5 font-medium text-gray-700">Product</div>
+                    <div class="col-span-2 font-medium text-gray-700">Price</div>
+                    <div class="col-span-3 font-medium text-gray-700">Quantity</div>
+                    <div class="col-span-2 font-medium text-gray-700 text-right">Total</div>
+                </div>
+
+                <!-- Cart Items -->
+                <!-- Item 1 -->
+                <div class="flex flex-col md:grid md:grid-cols-12 gap-4 p-4 mb-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="col-span-5 flex items-center gap-4">
+                        <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                            <img src="images\products\3.jpg" alt="Black wireless noise-canceling headphones with silver accents on a white background" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-800">Premium Wireless Headphones</h3>
+                            <p class="text-sm text-gray-500">Black · Wireless</p>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <span class="font-medium text-gray-700">$199.99</span>
+                    </div>
+                    <div class="col-span-3 flex items-center">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="quantity-btn px-3 py-1 text-gray-600" onclick="updateQuantity(1, -1)">-</button>
+                            <input type="number" min="1" value="1" class="w-12 py-1 text-center border-x border-gray-300" id="quantity1">
+                            <button class="quantity-btn px-3 py-1 text-gray-600" onclick="updateQuantity(1, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex items-center justify-end">
+                        <span class="font-medium text-gray-800" id="itemTotal1">$199.99</span>
+                        <button class="ml-4 text-gray-400 hover:text-red-500" onclick="removeItem(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col md:grid md:grid-cols-12 gap-4 p-4 mb-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="col-span-5 flex items-center gap-4">
+                        <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                            <img src="images\products\2.jpg" alt="White ceramic coffee mug with black handle on a wooden table with coffee beans scattered around" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-800">Ceramic Coffee Mug</h3>
+                            <p class="text-sm text-gray-500">White · 12oz</p>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <span class="font-medium text-gray-700">$15.99</span>
+                    </div>
+                    <div class="col-span-3 flex items-center">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="quantity-btn px-3 py-1 text-gray-600" onclick="updateQuantity(2, -1)">-</button>
+                            <input type="number" min="1" value="2" class="w-12 py-1 text-center border-x border-gray-300" id="quantity2">
+                            <button class="quantity-btn px-3 py-1 text-gray-600" onclick="updateQuantity(2, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex items-center justify-end">
+                        <span class="font-medium text-gray-800" id="itemTotal2">$31.98</span>
+                        <button class="ml-4 text-gray-400 hover:text-red-500" onclick="removeItem(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Continue Shopping -->
+                <div class="flex justify-between items-center mt-6">
+                    <a href="shop.html" class="flex items-center text-blue-600 hover:text-blue-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+                        Continue Shopping
+                    </a>
+                </div>
+            </main>
+
+            <!-- Order Summary -->
+            <aside class="lg:w-1/3">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 sticky top-4">
+                    <h2 class="text-xl font-bold text-gray-800 mb-6">Order Summary</h2>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span class="font-medium" id="subtotal">$247.96</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Shipping</span>
+                            <span class="font-medium">$5.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tax</span>
+                            <span class="font-medium">$19.84</span>
+                        </div>
+                        <div class="border-t border-gray-200 pt-3 mt-3 flex justify-between">
+                            <span class="font-bold text-gray-800">Total</span>
+                            <span class="font-bold text-gray-800" id="total">$273.79</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-md font-medium transition duration-200">
+                        Proceed to Checkout
+                    </button>
+
+                    <div class="mt-4 text-sm text-gray-500">
+                        <p>Your order qualifies for free delivery.</p>
+                        <p class="mt-1">Estimated delivery: 3-5 business days</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // Update quantity and calculate totals
+        function updateQuantity(itemId, change) {
+            const input = document.getElementById(`quantity${itemId}`);
+            let quantity = parseInt(input.value);
+            quantity += change;
+
+            if (quantity < 1) quantity = 1;
+
+            input.value = quantity;
+
+            // In a real app, you would update the individual item price here
+            // For demo, we'll just recalculate totals
+            calculateTotals();
+        }
+
+        // Remove item from cart
+        function removeItem(itemId) {
+            // In a real app, you would remove the item from the cart
+            // For demo, we'll just recalculate totals and show removed message
+            document.getElementById(`quantity${itemId}`).value = 0;
+            calculateTotals();
+            alert('Item removed from cart');
+        }
+
+        // Calculate all totals (simplified for demo)
+        function calculateTotals() {
+            let subtotal = 0;
+
+            // Normally you would get price from data and multiply by quantity
+            const quantity1 = parseInt(document.getElementById('quantity1').value) || 0;
+            subtotal += quantity1 * 199.99;
+
+            const quantity2 = parseInt(document.getElementById('quantity2').value) || 0;
+            subtotal += quantity2 * 15.99;
+
+            // Update individual item totals
+            document.getElementById('itemTotal1').textContent = '$' + (quantity1 * 199.99).toFixed(2);
+            document.getElementById('itemTotal2').textContent = '$' + (quantity2 * 15.99).toFixed(2);
+
+            // Update display
+            const shipping = 5.99;
+            const tax = subtotal * 0.08; // 8% tax
+
+            document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+            document.getElementById('total').textContent = '$' + (subtotal + shipping + tax).toFixed(2);
+        }
+
+        // Calculate totals on load
+        window.addEventListener('DOMContentLoaded', calculateTotals);
+    </script>
+</body>
+</html>
+

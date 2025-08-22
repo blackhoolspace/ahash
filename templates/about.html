@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FashionFusion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css'">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Navigation -->
+    <!-- <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 playfair">FASHIONFUSION</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+                <a href="#" class="text-gray-900 font-medium">About</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav> -->
+
+    <section id="header">
+        <a href="#"><img src="{% static 'css/images\logo78.png' %}" class="logo" alt="" style="width: 68px; height: 51px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html"> Blog</a></li>
+                <li><a href="about.html"> About</a></li>
+                <li><a href="login.html">login</a></li>
+                <li id="lg-bag"><a href=""><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <header class="gradient-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Story</h1>
+            <p class="max-w-2xl mx-auto text-gray-600">Discover the journey behind FashionFusion and our passion for
+                sustainable fashion</p>
+        </div>
+    </header>
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db64006d-41bc-4e02-b9ec-d03a1bee8e88.png"
+                    alt="Eco-friendly clothing factory with workers carefully inspecting organic cotton fabric"
+                    class="rounded-lg shadow-lg w-full h-auto">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-6">Where Style Meets Sustainability</h2>
+                <p class="text-gray-600 mb-6">Founded in 2018, FashionFusion began as a small boutique with a big dream
+                    - to revolutionize the fashion industry by creating beautiful clothing that doesn't harm the planet.
+                </p>
+                <p class="text-gray-600 mb-6">From our humble beginnings with just three employees, we've grown into a
+                    global brand with over 50 stores worldwide, all while maintaining our commitment to ethical
+                    production and sustainable materials.</p>
+                <p class="text-gray-600">Every piece in our collection is carefu
+
+                    <!-- About Section -->
+                <section class="py-20">lly crafted to ensure the highest quality while minimizing our environmental
+                    impact. We believe fashion should be both beautiful and responsible.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-4">Our Core Values</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">These principles guide everything we do at FashionFusion</p>
+            </div>
+            <div class="grid md:grid-cols-3 gapO-10">
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-4">Sustainable Materials</h3>
+                    <p class="text-gray-600">We use organic cotton, recycled polyester, and other eco-friendly fabrics
+                        that reduce environmental impact.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center mb-8 md:mb-0">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-4">Ethical Production</h3>
+                    <p class="text-gray-600">All our garments are made in certified factories with fair wages and safe
+                        working conditions.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-4">Timeless Design</h3>
+                    <p class="text-gray-600">We create classic pieces designed to last beyond seasonal trends, reducing
+                        fashion waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-4">Meet Our Founders</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">The passionate team behind FashionFusion</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="team-card bg-white p-6 rounded-lg shadow-sm transition-all">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/68e4ec9e-4d39-42af-8be0-f7569c0379f1.png"
+                        alt="Smiling woman in her 30s with curly brown hair wearing a sustainable linen dress"
+                        class="w-full h-64 object-cover rounded-lg mb-4">
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-2">Sarah Johnson</h3>
+                    <p class="text-gray-500 mb-4">CEO & Co-Founder</p>
+                    <p class="text-gray-600">With 15 years in sustainable fashion, Sarah leads our vision for
+                        eco-conscious design.</p>
+                </div>
+                <div class="team-card bg-white p-6 rounded-lg shadow-sm transition-all">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/afad3ace-e208-43f9-a9ee-f3fabc5c4a9c.png"
+                        alt="Man in his late 30s with short black hair wearing a smart casual blazer made from recycled materials"
+                        class="w-full h-64 object-cover rounded-lg mb-4">
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-2">James Chen</h3>
+                    <p class="text-gray-500 mb-4">CTO & Co-Founder</p>
+                    <p class="text-gray-600">James oversees our innovative fabric technology and supply chain
+                        sustainability.</p>
+                </div>
+                <div class="team-card bg-white p-6 rounded-lg shadow-sm transition-all">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3962a25b-c00d-4cdc-a08a-45037a275222.png"
+                        alt="Young woman with blonde hair wearing circular fashion designs in a bright studio"
+                        class="w-full h-64 object-cover rounded-lg mb-4">
+                    <h3 class="playfair text-xl font-semibold text-gray-800 mb-2">Emma Rodriguez</h3>
+                    <p class="text-gray-500 mb-4">Creative Director</p>
+                    <p class="text-gray-600">Emma brings our collections to life with her award-winning design
+                        expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="playfair text-3xl font-bold mb-6" style="color: black;">Join Our Sustainable Fashion Movement</h2>
+            <p class="max-w-2xl mx-auto text-gray-300 mb-8">Be part of the change. Shop our eco-friendly collections or
+                learn how you can support our mission.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="bg-white text-gray-800 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-all">Shop
+                    Now</a>
+                <a href="#"
+                    class="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-gray-800 transition-all">Contact
+                    Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="playfair text-xl font-semibold mb-4">FASHIONFUSION</h3>
+                    <p class="text-gray-400">Sustainable fashion for a better tomorrow.</p>
+                </div>
+                <div>
+                    <h4 class="playfair text-lg font-semibold mb-4" style="color: whitesmoke;">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="playfair text-lg font-semibold mb-4" style="color: whitesmoke;">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="playfair text-lg font-semibold mb-4" style="color: whitesmoke;">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email"
+                            class="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                        <button
+                            class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-all">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 FashionFusion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality would go here
+        document.addEventListener('DOMContentLoaded', function () {
+            // Any JavaScript functionality can be added here
+            console.log('About page loaded');
+        });
+    </script>
+</body>
+
+</html>
